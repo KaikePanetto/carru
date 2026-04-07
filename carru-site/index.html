@@ -54,13 +54,6 @@
     <section id="nosso-espaço">
         <div class="cinza">
             <h1 class="lugar">CONHEÇA O <strong>ESPAÇO CARRU</strong></h1>
-            <div class="video">
-                <video controls>
-                    <source src="video/WhatsApp Video 2026-03-28 at 22.38.21.mp4">
-                    <track kind="subtitles" srclang="pt-br"
-                        src="video/legenda/whatsapp-video-2026-03-28-at-22.38.21-1.vtt" label="Portugês">
-                </video>
-            </div>
             <div class="loja">
                 <img src="img/WhatsApp Image 2026-02-23 at 09.37.25.jpeg" alt="">
             </div>
@@ -76,41 +69,6 @@
                 <img src="img/foto2.jpeg" alt="">
                 <img src="img/foto3.jpeg" alt="">
             </div>
-            <div class="tabela">
-                <h2>Nosso Funcionamento</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Dias</th>
-                            <th>Horário</th>
-                            <th>Localidade</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Segunda-feira</td>
-                            <td rowspan="5">9:00 às 18:00</td>
-                            <td rowspan="6">Shoppng Mestre Álvaro</td>
-                        </tr>
-                        <tr>
-                            <td>Terça-feira</td>
-                        </tr>
-                        <tr>
-                            <td>Quarta-feira</td>
-                        </tr>
-                        <tr>
-                            <td>Quinta-feira</td>
-                        </tr>
-                        <tr>
-                            <td>Sexta-feira</td>
-                        </tr>
-                        <tr>
-                            <td>Sábado</td>
-                            <td>7:00 ás 13:00</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
         </div>
     </section>
     <section id="contato">
@@ -120,10 +78,10 @@
                 <li><a href="https://www.instagram.com/carru.br/" target="_blank">@carru.br</a></li>
                 <li><a href="https://www.instagram.com/carru.repasse/" target="_blank">@carru.repasse</a></li>
             </ul>
-            <form class="formulário">
+            <form class="formulário" onsubmit="enviarWhats(event)">
                 <h2>Entre em contato</h2>
-                <input class="input-box" type="text" id="nome" name="nome" placeholder="Nome" required>
-                <textarea class="input-box" name="mensagem" id="mensagem" placeholder="Mensagem" required></textarea>
+                    <input class="input-box" type="text" id="nome" name="nome" placeholder="Nome" required>
+                    <textarea  class="input-box" name="mensagem" id="mensagem" placeholder="Mensagem" required></textarea>
                 </div>
                 <button type="submit">Enviar WhatsApp</button>
 
@@ -131,6 +89,25 @@
             <p>AGENDE a avaliação <strong>DO SEU VEÍCULO</strong></p>
         </footer>
     </section>
+
+    <script>
+        function enviarWhats(event) {
+            event.preventDefault()
+
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const telefone = '5527999757756';
+
+            const texto = `Olá! Me chamo ${nome}. ${mensagem}`;
+            const msgFormatada = encodeURIComponent(texto);
+
+            const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
+
+            window.open(url, '_blank');
+        }
+    </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"48631cfcb99f4ceeb95d15d13377f2d3","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+
 </body>
 
 </html>
