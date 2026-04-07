@@ -1,0 +1,161 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(100deg, rgb(72, 43, 99), rgb(71, 2, 136));
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 60px;
+}
+
+.imagem {
+    animation: logo 5s ease-in-out infinite;
+    max-width: 300px;
+    width: 100%;
+}
+
+.formulário {
+    width: 430px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 90px;
+    border-radius: 20px;
+    color: #f0f8ff;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.formulário h1 {
+    margin-bottom: 20px;
+}
+
+.input {
+    position: relative;
+}
+
+.input input {
+    background-color: transparent;
+    padding: 15px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 15px;
+    color: aliceblue;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    width: 100%;
+    height: 50px;
+    transition: all 0.5s ease;
+}
+
+.input input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.input i {
+    position: absolute;
+    right: 11px;
+    font-size: 15px;
+    top: 17px;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.recordar {
+    text-align: justify;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.recordar input {
+    accent-color: #673ccc;
+}
+
+button {
+    background-color: #be2edd;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    color: aliceblue;
+    font-weight: 700;
+    margin-bottom: 20px;
+    transition: all 0.5s ease;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+    box-shadow: 6px 10px 26px -6px rgba(180, 48, 207, 0.75);
+}
+
+.esqueci p a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    text-align: justify;
+}
+
+.esqueci p {
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+.esqueci p a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.cadastro {
+    text-align: center;
+}
+
+.cadastro a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.cadastro a:hover {
+    text-decoration: underline;
+}
+
+.input input:focus {
+    border: 1px solid rgba(180, 48, 207, 0.75);
+    box-shadow: 0px 0px 30px -2px rgba(180, 48, 207, 0.75);
+}
+
+@media (max-width: 900px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@keyframes logo {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.07);
+    }
+}
