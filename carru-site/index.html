@@ -5,23 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="img/futuro_png-removebg-preview.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <title>Carru</title>
 </head>
 
 <body>
-    <header>
-        <nav class="navegação">
-            <ul>
-                <li><a href="#home" class="links-nav">Início</a></li>
-                <li><a href="#nosso-serviço" class="links-nav">Nosso Serviço</a></li>
-                <li><a href="#nosso-espaço" class="links-nav">Nosso Espaço</a></li>
-                <li><a href="#contato" class="links-nav">Contato</a></li>
-            </ul>
-            <div class="imagem"><a href="#"><img
-                        src="img/WhatsApp_Image_2026-02-23_at_09.36.07-removebg-preview (1).png" alt=""></a></div>
-        </nav>
-    </header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-roxo ">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img
+                    src="img/WhatsApp_Image_2026-02-23_at_09.36.07-removebg-preview (1).png" style="width: 150px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active text-white" aria-current="page" href="#home"><strong>Home</strong></a>
+                    <a class="nav-link active text-white" href="#sobre_nos"><strong>Sobre Nós</strong></a>
+                    <a class="nav-link active text-white" href="#nosso-espaço"><strong>Nosso Espaço</strong></a>
+                    <a class="nav-link active text-white" href="#contato"><strong>Contato</strong></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
     <section id="home">
         <div class="topo">
             <h1 class="titulo-flex">
@@ -37,58 +45,79 @@
                 </div>
         </div>
     </section>
-    <div class="lista">
-        <ul>
-            <li>Venda em até <strong>24 horas</strong></li>
-            <li>A <strong>melhor proposta</strong> pelo seu veículo </li>
-            <li>Rápido, <strong>seguro</strong>, pouca burocracia</li>
-            <li>Aceitando a proposta, <strong>Pix na conta</strong> no mesmo dia</li>
-            <li>Venda o carro <strong>do jeito que se encontra</strong>, mesmo com defeito</li>
-            <li>Mesmo <strong>financiado</strong>, com <strong>débitos</strong> ou <strong>multas</strong>, venda
-                com a
-                gente</li>
-            <li><strong>Base própia</strong> com milhares de compradores ativos</li>
-        </ul>
-    </div>
-    </section>
-    <section id="nosso-espaço">
-        <div class="cinza">
-            <h1 class="lugar">CONHEÇA O <strong>ESPAÇO CARRU</strong></h1>
-            <div class="loja">
-                <img src="img/WhatsApp Image 2026-02-23 at 09.37.25.jpeg" alt="">
+
+    <section class="bg-roxo " id="sobre_nos">
+        <h1>Sobre Nós</h1>
+        <div class="d-flex justify-content-evenly">
+            <div class="card" style="width: 18rem;">
+                <img src="img/foto.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card’s content.</p>
+                    <a href="#" class="btn bg-roxo text-light">Saiba mais</a>
+                </div>
             </div>
-            <h2 class="lugar">Onde está localizada nossa loja?</h2>
-            <p class="lugar">Nossa loja está localizada no <strong>Shopping Mestre Álvaro</strong>. <br>Faça-nos uma
+            <div class="card" style="width: 18rem;">
+                <img src="img/foto2.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card’s content.</p>
+                    <a href="#" class="btn bg-roxo text-light">Saiba mais</a>
+                </div>
+            </div>
+            <div class="card espaco" style="width: 18rem;">
+                <img src="img/foto3.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card’s content.</p>
+                    <a href="#" class="btn bg-roxo text-light">Saiba mais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="nosso-espaço" class="bg-cinza">
+        <div class="cinza">
+            <h1 class="lugar text-center">CONHEÇA O <strong>ESPAÇO CARRU</strong></h1>
+            <div class="loja">
+                <img src="img/WhatsApp Image 2026-02-23 at 09.37.25.jpeg"
+                    class="d-block mx-auto img-fluid w-50 border border-3 border-black rounded-4">
+            </div>
+            <h2 class="lugar text-center">Onde está localizada nossa loja?</h2>
+            <p class="lugar text-center">Nossa loja está localizada no <strong>Shopping Mestre Álvaro</strong>.
+                <br>Faça-nos uma
                 visita e avalie
                 seu
                 carro
                 <strong>gratuitamente!</strong>
             </p>
-            <div class="fotinhas">
-                <img src="img/foto.jpeg" alt="">
-                <img src="img/foto2.jpeg" alt="">
-                <img src="img/foto3.jpeg" alt="">
-            </div>
         </div>
     </section>
-    <section id="contato">
+
+    <section id="contato" class="bg-aliceblue">
         <footer>
-            <h2>Siga nossas redes sociais</h2>
-            <ul>
-                <li><a href="https://www.instagram.com/carru.br/" target="_blank">@carru.br</a></li>
-                <li><a href="https://www.instagram.com/carru.repasse/" target="_blank">@carru.repasse</a></li>
+            <h2 class="text-center">Siga nossas redes sociais</h2>
+            <ul class="text-center">
+                <li><a class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                        href="https://www.instagram.com/carru.br/" target="_blank">@carru.br</a></li>
+                <li><a class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                        href="https://www.instagram.com/carru.repasse/" target="_blank">@carru.repasse</a></li>
             </ul>
             <form class="formulário" onsubmit="enviarWhats(event)">
-                <h2>Entre em contato</h2>
-                    <input class="input-box" type="text" id="nome" name="nome" placeholder="Nome" required>
-                    <textarea  class="input-box" name="mensagem" id="mensagem" placeholder="Mensagem" required></textarea>
+                <h2 class="text-center">Entre em contato</h2>
+                <input class="input-box" type="text" id="nome" name="nome" placeholder="Nome" required>
+                <textarea class="input-box" name="mensagem" id="mensagem" placeholder="Mensagem" required></textarea>
                 </div>
-                <button type="submit">Enviar WhatsApp</button>
+                <button class="btn bg-roxo text-light" type="submit">Enviar WhatsApp</button>
 
             </form>
-            <p>AGENDE a avaliação <strong>DO SEU VEÍCULO</strong></p>
+            <p class="text-center">AGENDE a avaliação <strong>DO SEU VEÍCULO</strong></p>
         </footer>
     </section>
+
 
     <script>
         function enviarWhats(event) {
@@ -106,8 +135,20 @@
             window.open(url, '_blank');
         }
     </script>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"48631cfcb99f4ceeb95d15d13377f2d3","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+    <script defer
+        src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516"
+        integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg=="
+        data-cf-beacon='{"version":"2024.11.0","token":"48631cfcb99f4ceeb95d15d13377f2d3","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
+        crossorigin="anonymous"></script>
 
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
