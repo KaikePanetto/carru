@@ -60,19 +60,6 @@
     min-height: 150px;
 }
 
-.container-carro {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    z-index: 2;
-    margin-bottom: -30px;
-}
-
-.imagem-carro {
-    width: 300px;
-    animation: flutuar 2.5s ease;
-}
-
 .titulo-flex {
     display: flex;
     align-items: center;
