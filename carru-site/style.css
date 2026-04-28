@@ -123,6 +123,9 @@
     .espaco{
         margin-bottom: 50px;
     }
+    .loja img {
+        width: 90% !important;
+    }
 }
 
 .bg-cinza{
