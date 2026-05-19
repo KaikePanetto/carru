@@ -219,24 +219,39 @@ html{
     padding: 20px;
 }
 
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 340px));
+    justify-content: center;
+    align-items: start;
+    gap: 28px;
+    padding: 0 20px;
+}
+
 .card {
     cursor: pointer;
     overflow: hidden;
+    border-radius: 0.75rem;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 16px rgba(72, 34, 88, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: scale(1.04);
+    transform: translateY(-4px);
     box-shadow: 0 12px 40px rgba(72, 34, 88, 0.28);
 }
 
-.cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 320px));
-    justify-content: center;
-    align-items: start;
-    gap: 24px;
-    padding: 0 20px;
+.card-img-top {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-body {
+    padding: 1rem 1.25rem 1.25rem;
 }
 
 .card img {
@@ -244,22 +259,30 @@ html{
 }
 
 .card:hover img {
-    transform: scale(1.01);
+    transform: scale(1.03);
 }
 
 .card-text {
     overflow: hidden;
-    max-height: 0;
-    opacity: 0;
+    max-height: 0 !important;
+    opacity: 0 !important;
     transition: max-height 0.4s ease, opacity 0.4s ease;
     margin-bottom: 0;
 }
 
 .card-text.aberto {
-    max-height: 300px;
-    opacity: 1;
+    max-height: 300px !important;
+    opacity: 1 !important;
 }
 
-#sobre_nos .d-flex {
-    align-items: flex-start;
+@media (max-width: 600px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+        padding: 0 16px;
+        gap: 20px;
+    }
+
+    .card-img-top {
+        height: 200px;
+    }
 }
