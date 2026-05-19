@@ -48,6 +48,7 @@ html{
 
 #sobre_nos{
     min-height: 90vh;
+    padding: 20px 20px 60px;
 }
 
 
@@ -124,11 +125,14 @@ html{
         flex-direction: column;
         gap: 50px;
     }
+    #sobre_nos .d-flex {
+        align-items: center;
+    }
     .espaco{
         margin-bottom: 50px;
     }
     .loja img {
-        width: 90% !important;
+        max-width: 90% !important;
     }
 }
 
@@ -137,23 +141,57 @@ html{
 }
 
 .cinza{
+    display: grid;
+    gap: 20px;
     padding: 32px;
+}
+
+.maps-link {
+    color: #472258;
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.maps-link:hover {
+    color: #7c3aad;
 }
 
 .loja{
     margin: 20px;
 }
 
+.loja img {
+    max-width: 35%;
+}
+
 #contato ul li{
     list-style: none;
+    margin-bottom: 2px;
+}
+
+.social-link {
+    color: #1a1a1a;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 1rem;
+    transition: transform 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.social-link:hover {
+    color: #1a1a1a;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transform: scale(1.1);
 }
 
 .formulário {
     margin: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    display: grid;
+    justify-items: center;
+    gap: 10px;
 }
 
 .input-box{
@@ -179,4 +217,49 @@ html{
 
 #contato{
     padding: 20px;
+}
+
+.card {
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.04);
+    box-shadow: 0 12px 40px rgba(72, 34, 88, 0.28);
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 320px));
+    justify-content: center;
+    align-items: start;
+    gap: 24px;
+    padding: 0 20px;
+}
+
+.card img {
+    transition: transform 0.5s ease-in-out;
+}
+
+.card:hover img {
+    transform: scale(1.01);
+}
+
+.card-text {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+    margin-bottom: 0;
+}
+
+.card-text.aberto {
+    max-height: 300px;
+    opacity: 1;
+}
+
+#sobre_nos .d-flex {
+    align-items: flex-start;
 }

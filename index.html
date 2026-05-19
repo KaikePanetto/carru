@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <title>Carru</title>
@@ -48,26 +49,29 @@
 
     <section class="bg-roxo " id="sobre_nos">
         <h1>Sobre Nós</h1>
-        <div class="d-flex justify-content-evenly">
-            <div class="card" style="width: 18rem;">
+        <div class="cards-grid">
+            <div class="card" onclick="crescer1()">
                 <img src="img/foto.jpeg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Nossa Loja</h5>
-                    <p class="card-text">Especialistas na compra e venda de veículos com total transparência e segurança. Aqui você encontra um atendimento ágil, uma avaliação justa e o melhor negócio para o seu carro.</p>
+                    <h6>Clique aqui para saber mais:</h6>
+                    <p class="card-text" id="res1">Especialistas na compra e venda de veículos com total transparência e segurança. Aqui você encontra um atendimento ágil, uma avaliação justa e o melhor negócio para o seu carro.</p>
                 </div>
             </div>
-            <div class="card" style="width: 18rem;">
+            <div class="card" onclick="crescer2()">
                 <img src="img/foto2.jpeg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Venda em 24 Horas</h5>
-                    <p class="card-text">Avaliamos o seu veículo e cuidamos de todo o processo burocrático para você. Vendemos seu carro com total rapidez, praticidade e a segurança que você sempre buscou.</p>
+                    <h6>Clique aqui para saber mais:</h6>
+                    <p class="card-text" id="res2">Avaliamos o seu veículo e cuidamos de todo o processo burocrático para você. Vendemos seu carro com total rapidez, praticidade e a segurança que você sempre buscou.</p>
                 </div>
             </div>
-            <div class="card espaco" style="width: 18rem;">
+            <div class="card espaco" onclick="crescer3()">
                 <img src="img/foto3.jpeg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Clientes Satisfeitos</h5>
-                    <p class="card-text">Já ajudamos diversos clientes a vender seus carros com total facilidade e sucesso. Nosso compromisso é oferecer confiança, suporte completo e um atendimento de qualidade.</p>
+                    <h6>Clique aqui para saber mais:</h6>
+                    <p class="card-text" id="res3">Já ajudamos diversos clientes a vender seus carros com total facilidade e sucesso. Nosso compromisso é oferecer confiança, suporte completo e um atendimento de qualidade.</p>
                 </div>
             </div>
         </div>
@@ -78,10 +82,10 @@
             <h1 class="lugar text-center">CONHEÇA O <strong>ESPAÇO CARRU</strong></h1>
             <div class="loja">
                 <img src="img/WhatsApp Image 2026-02-23 at 09.37.25.jpeg"
-                    class="d-block mx-auto img-fluid w-50 border border-3 border-black rounded-4">
+                    class="d-block mx-auto img-fluid w-35 border border-3 border-black rounded-4">
             </div>
             <h2 class="text-center">Onde está localizada nossa loja?</h2>
-            <p class="lugar text-center">Nossa loja está localizada no <strong>Shopping Mestre Álvaro</strong>.
+            <p class="lugar text-center">Nossa loja está localizada no <a href="https://www.google.com/maps/search/?q=Shopping+Mestre+Álvaro+Serra+ES" target="_blank" class="maps-link"><strong>Shopping Mestre Álvaro</strong></a>.
                 <br>Faça-nos uma
                 visita e avalie
                 seu
@@ -95,10 +99,8 @@
         <footer>
             <h2 class="text-center">Siga nossas redes sociais!</h2>
             <ul class="text-center">
-                <li><a class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
-                        href="https://www.instagram.com/carru.br/" target="_blank">@carru.br</a></li>
-                <li><a class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
-                        href="https://www.instagram.com/carru.repasse/" target="_blank">@carru.repasse</a></li>
+                <li><a class="social-link" href="https://www.instagram.com/carru.br/" target="_blank"><i class="bi bi-instagram"></i>@carru.br</a></li>
+                <li><a class="social-link" href="https://www.instagram.com/carru.repasse/" target="_blank"><i class="bi bi-instagram"></i>@carru.repasse</a></li>
             </ul>
             <form class="formulário" onsubmit="enviarWhats(event)">
                 <h2 class="text-center">Entre em contato</h2>
@@ -128,7 +130,7 @@
             window.open(url, '_blank');
         }
     </script>
-
+    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
