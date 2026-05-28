@@ -253,14 +253,6 @@ html{
     padding: 1rem 1.25rem 1.25rem;
 }
 
-.card img {
-    transition: transform 0.5s ease-in-out;
-}
-
-.card:hover img {
-    transform: scale(1.03);
-}
-
 .card-text {
     overflow: hidden;
     max-height: 0 !important;
