@@ -211,7 +211,7 @@ html{
 
 .input-box:focus{
     border: 1px solid #472258;
-    box-shadow: rgba(44, 29, 129, 0.15) 0px 48px 100px 0px;
+    box-shadow: rgba(44, 29, 129, 0.15) 0px 0px 10px;
 }
 
 #contato{
