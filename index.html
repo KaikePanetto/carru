@@ -21,10 +21,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active text-white" aria-current="page" href="#home"><strong>Home</strong></a>
-                    <a class="nav-link active text-white" href="#sobre_nos"><strong>Sobre Nós</strong></a>
-                    <a class="nav-link active text-white" href="#nosso-espaço"><strong>Nosso Espaço</strong></a>
-                    <a class="nav-link active text-white" href="#contato"><strong>Contato</strong></a>
+                    <a class="nav-link active text-white ms-3" aria-current="page" href="#home"><strong>Home</strong></a>
+                    <a class="nav-link active text-white ms-3" href="#sobre_nos"><strong>Sobre Nós</strong></a>
+                    <a class="nav-link active text-white ms-3" href="#nosso-espaço"><strong>Nosso Espaço</strong></a>
+                    <a class="nav-link active text-white ms-3" href="#contato"><strong>Contato</strong></a>
                     <button id="modoEscuro" onclick="modoEscuro()">Modo Escuro</button>
                 </div>
             </div>
@@ -33,22 +33,22 @@
 
     <section id="home" class="bg-aliceblue">
         <div class="topo">
-            <h1 class="titulo-flex">
-                <div class="texto-empilhado">
+            <h1 class="titulo-flex d-flex align-items-center justify-content-center gap-3">
+                <div class="texto-empilhado d-flex flex-column align-items-end">
                     <span class="um"><strong>VENDA</strong> seu</span> <br>
                     <span class="dois"><strong>CARRO</strong> em</span>
                 </div>
                 <span class="nome-maior">24 horas</span>
             </h1>
-            <div class="container-carro">
+            <div class="container-carro d-flex justify-content-center">
                 <img src="img/carro png.png" alt="" class="imagem-carro">
             </div>
         </div>
     </section>
 
     <section class="bg-roxo " id="sobre_nos">
-        <h1>Sobre Nós</h1>
-        <div class="cards-grid">
+        <h1 class="text-center">Sobre Nós</h1>
+        <div class="d-flex flex-wrap justify-content-center align-items-start gap-3 px-3">
             <div class="card" onclick="crescer1()">
                 <img src="img/foto.jpeg" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -65,7 +65,7 @@
                     <p class="card-text" id="res2">Avaliamos o seu veículo e cuidamos de todo o processo burocrático para você. Vendemos seu carro com total rapidez, praticidade e a segurança que você sempre buscou.</p>
                 </div>
             </div>
-            <div class="card espaco" onclick="crescer3()">
+            <div class="card" onclick="crescer3()">
                 <img src="img/foto3.jpeg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Clientes Satisfeitos</h5>
@@ -77,9 +77,9 @@
     </section>
 
     <section id="nosso-espaço" class="bg-cinza">
-        <div class="cinza">
+        <div class="cinza d-flex flex-column gap-3">
             <h1 class="lugar text-center">CONHEÇA O <strong>ESPAÇO CARRU</strong></h1>
-            <div class="loja">
+            <div class="loja my-3">
                 <img src="img/WhatsApp Image 2026-02-23 at 09.37.25.jpeg"
                     class="d-block mx-auto img-fluid w-35 border border-3 border-black rounded-4">
             </div>
@@ -97,38 +97,20 @@
     <section id="contato" class="bg-aliceblue">
         <footer>
             <h2 class="text-center">Siga nossas redes sociais!</h2>
-            <ul class="text-center">
-                <li><a class="social-link" href="https://www.instagram.com/carru.br/" target="_blank"><i class="bi bi-instagram"></i>@carru.br</a></li>
-                <li><a class="social-link" href="https://www.instagram.com/carru.repasse/" target="_blank"><i class="bi bi-instagram"></i>@carru.repasse</a></li>
+            <ul class="list-unstyled text-center">
+                <li><a class="social-link d-inline-flex align-items-center gap-2" href="https://www.instagram.com/carru.br/" target="_blank"><i class="bi bi-instagram"></i>@carru.br</a></li>
+                <li><a class="social-link d-inline-flex align-items-center gap-2" href="https://www.instagram.com/carru.repasse/" target="_blank"><i class="bi bi-instagram"></i>@carru.repasse</a></li>
             </ul>
-            <form class="formulário" onsubmit="enviarWhats(event)">
+            <form class="d-flex flex-column align-items-center gap-2 m-3" id="formulario-contato" onsubmit="enviarWhats(event)">
                 <h2 class="text-center">Entre em contato</h2>
                 <input class="input-box" type="text" id="nome" name="nome" placeholder="Nome" required>
                 <textarea class="input-box" name="mensagem" id="mensagem" placeholder="Mensagem" required></textarea>
                 <button class="btn bg-roxo text-light" type="submit">Enviar WhatsApp</button>
-
             </form>
+            <div id="mensagem-enviada" class="text-center" style="display:none;">MENSAGEM ENVIADA!</div>
             <p class="text-center">AGENDE a avaliação <strong>DO SEU VEÍCULO</strong></p>
         </footer>
     </section>
-
-
-    <script>
-        function enviarWhats(event) {
-            event.preventDefault()
-
-            const nome = document.getElementById('nome').value;
-            const mensagem = document.getElementById('mensagem').value;
-            const telefone = '5527999757756';
-
-            const texto = `Olá! Me chamo ${nome}. ${mensagem}`;
-            const msgFormatada = encodeURIComponent(texto);
-
-            const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
-
-            window.open(url, '_blank');
-        }
-    </script>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

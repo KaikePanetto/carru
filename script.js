@@ -8,20 +8,25 @@ function crescer3() {
     document.getElementById('res3').classList.toggle('aberto');
 }
 
-let escuro = false;
-
 function modoEscuro() {
-    escuro = !escuro;
-    document.querySelectorAll(".bg-aliceblue").forEach(secao => {
-        secao.style.backgroundColor = escuro ? "#888888" : "aliceblue";
-        secao.style.color = escuro ? "white" : "black";
-    });
-
-    document.querySelectorAll(".card").forEach(card => {
-        card.style.backgroundColor = escuro ? "#6e6e6e" : "white";
-
-        card.querySelectorAll("h5, h6, p").forEach(texto => {
-            texto.style.color = escuro ? "white" : "black";
-        });
-    });
+    const ativo = document.body.classList.toggle('dark');
+    document.getElementById('modoEscuro').textContent = ativo ? 'Modo Claro' : 'Modo Escuro';
 }
+
+function enviarWhats(event) {
+            event.preventDefault()
+
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const telefone = '5527999757756';
+
+            const texto = `Olá! Me chamo ${nome}. ${mensagem}`;
+            const msgFormatada = encodeURIComponent(texto);
+
+            const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
+
+            window.open(url, '_blank');
+
+            document.getElementById('formulario-contato').style.display = 'none';
+            document.getElementById('mensagem-enviada').style.display = 'flex';
+        }

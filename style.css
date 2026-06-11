@@ -1,4 +1,3 @@
-
 html{
     scroll-behavior: smooth;
 }
@@ -29,13 +28,8 @@ html{
     color: rgb(160, 160, 160) !important;
 }
 
-.nav-link{
-    margin-left: 15px;
-}
 
 .container-carro {
-    display: flex;
-    justify-content: center;
     position: relative;
     z-index: 2;
     margin-bottom: -30px;
@@ -53,7 +47,6 @@ html{
 
 #sobre_nos h1{
     color: aliceblue;
-    text-align: center;
     padding: 50px;
 }
 
@@ -64,17 +57,10 @@ html{
 }
 
 .titulo-flex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
     color: #472258;
 }
 
 .texto-empilhado {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
     line-height: 0.8;
 }
 
@@ -115,32 +101,12 @@ html{
     }
 }
 
-@media (max-width: 900px){
-    .d-flex{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        gap: 50px;
-    }
-    #sobre_nos .d-flex {
-        align-items: center;
-    }
-    .espaco{
-        margin-bottom: 50px;
-    }
-    .loja img {
-        max-width: 90% !important;
-    }
-}
 
 .bg-cinza{
     background-color: rgb(182, 182, 182);
 }
 
 .cinza{
-    display: grid;
-    gap: 20px;
     padding: 32px;
 }
 
@@ -155,25 +121,18 @@ html{
     color: #7c3aad;
 }
 
-.loja{
-    margin: 20px;
-}
 
 .loja img {
-    max-width: 35%;
+    width: clamp(300px, 50%, 520px);
 }
 
-#contato ul li{
-    list-style: none;
+#contato li {
     margin-bottom: 2px;
 }
 
 .social-link {
     color: #1a1a1a;
     text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
     font-size: 1rem;
     transition: transform 0.2s ease, text-decoration-color 0.2s ease;
 }
@@ -185,12 +144,6 @@ html{
     transform: scale(1.1);
 }
 
-.formulário {
-    margin: 15px;
-    display: grid;
-    justify-items: center;
-    gap: 10px;
-}
 
 .input-box{
     max-width: 400px;
@@ -217,14 +170,6 @@ html{
     padding: 20px;
 }
 
-.cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 340px));
-    justify-content: center;
-    align-items: start;
-    gap: 28px;
-    padding: 0 20px;
-}
 
 .card {
     cursor: pointer;
@@ -234,6 +179,8 @@ html{
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0 4px 16px rgba(72, 34, 88, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 340px;
+    max-width: 100%;
 }
 
 .card:hover {
@@ -265,16 +212,20 @@ html{
     opacity: 1 !important;
 }
 
-@media (max-width: 600px) {
-    .cards-grid {
-        grid-template-columns: 1fr;
-        padding: 0 16px;
-        gap: 20px;
-    }
 
-    .card-img-top {
-        height: 200px;
-    }
+#mensagem-enviada {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #472258;
+    color: #f0e6f6;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 24px 32px;
+    border-radius: 10px;
+    width: fit-content;
+    margin: 0 auto 20px;
+    box-shadow: 0px 0px 10px rgba(114, 56, 141, 0.5);
 }
 
 #modoEscuro {
@@ -287,7 +238,89 @@ html{
 }
 
 #modoEscuro:hover {
-    background-color: #fff;
-    color: #472258;
-    border-color: #472258;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border-color: #fff;
+}
+
+body.dark {
+    background-color: #13111a;
+}
+
+body.dark .bg-aliceblue {
+    background-color: #1e1b2e !important;
+    color: #e8e0f0;
+}
+
+body.dark .topo,
+body.dark .titulo-flex {
+    color: #e8e0f0;
+}
+
+body.dark .bg-cinza {
+    background-color: #252236 !important;
+}
+
+body.dark .cinza h1,
+body.dark .cinza h2,
+body.dark .cinza p {
+    color: #e8e0f0;
+}
+
+body.dark .maps-link {
+    color: #c4a8e8;
+}
+
+body.dark .maps-link:hover {
+    color: #ddc4f8;
+}
+
+body.dark .card {
+    background-color: #2d2640 !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+body.dark .card:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+}
+
+body.dark .card h5,
+body.dark .card h6,
+body.dark .card p {
+    color: #e8e0f0 !important;
+}
+
+body.dark .input-box {
+    background-color: #2d2640;
+    color: #e8e0f0;
+    border-bottom-color: rgba(255, 255, 255, 0.25);
+}
+
+body.dark .input-box::placeholder {
+    color: rgba(232, 224, 240, 0.4);
+}
+
+body.dark .input-box:focus {
+    border-color: #9b6abf;
+    box-shadow: 0 0 10px rgba(155, 106, 191, 0.3);
+}
+
+body.dark .social-link {
+    color: #c4a8e8;
+}
+
+body.dark .social-link:hover {
+    color: #ddc4f8;
+}
+
+body.dark #modoEscuro {
+    border-color: #c4a8e8;
+    color: #c4a8e8;
+}
+
+body.dark #modoEscuro:hover {
+    background-color: rgba(155, 106, 191, 0.25);
+    color: #e8e0f0;
+    border-color: #c4a8e8;
 }
